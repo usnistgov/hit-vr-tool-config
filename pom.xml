@@ -6,7 +6,6 @@
   <name>hit-vr-tool-config</name>
   <properties>
     <hitcorehl7v2.version>1.0.9-SNAPSHOT</hitcorehl7v2.version>
-    <hitcore.version>1.0.14-SNAPSHOT</hitcore.version>
   </properties>
   <dependencies>
     <dependency>
@@ -19,16 +18,21 @@
       <artifactId>hit-core-hl7v2-service</artifactId>
       <version>${hitcorehl7v2.version}</version>
     </dependency>
+    <dependency>
+      <groupId>gov.nist.hit.core.hl7v2</groupId>
+      <artifactId>hit-core-hl7v2-api</artifactId>
+      <version>${hitcorehl7v2.version}</version>
+    </dependency>
     <!--<dependency>-->
       <!--<groupId>mysql</groupId>-->
       <!--<artifactId>mysql-connector-java</artifactId>-->
       <!--<version>5.1.36</version>-->
     <!--</dependency>-->
-    <!--<dependency>-->
-      <!--<groupId>com.h2database</groupId>-->
-      <!--<artifactId>h2</artifactId>-->
-      <!--<version>1.4.188</version>-->
-    <!--</dependency>-->
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <version>1.4.188</version>
+    </dependency>
   </dependencies>
 
 <build>
