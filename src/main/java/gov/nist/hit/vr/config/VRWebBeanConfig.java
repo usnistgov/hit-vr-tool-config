@@ -1,12 +1,7 @@
 package gov.nist.hit.vr.config;
 
-import gov.nist.hit.core.hl7v2.service.HL7V2MessageParser;
-import gov.nist.hit.core.hl7v2.service.HL7V2MessageParserImpl;
-import gov.nist.hit.core.hl7v2.service.HL7V2MessageValidator;
-import gov.nist.hit.core.hl7v2.service.HL7V2MessageValidatorImpl;
-import gov.nist.hit.core.hl7v2.service.HL7V2ResourcebundleLoaderImpl;
-import gov.nist.hit.core.hl7v2.service.HL7V2ValidationReportConverter;
-import gov.nist.hit.core.hl7v2.service.HL7V2ValidationReportConverterImpl;
+import gov.nist.hit.core.hl7v2.service.*;
+import gov.nist.hit.core.service.ResourceLoader;
 import gov.nist.hit.core.service.ResourcebundleLoader;
 
 import org.springframework.context.annotation.Bean;
@@ -15,6 +10,12 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class VRWebBeanConfig {
+
+    @Bean
+    public ResourceLoader resourceLoader() {
+        HL7V2ResourceLoaderImpl rs = new HL7V2ResourceLoaderImpl();
+        return rs;
+    }
 
     @Bean
     public ResourcebundleLoader resourcebundleLoader() {
@@ -35,5 +36,7 @@ public class VRWebBeanConfig {
     public HL7V2MessageParser hl7v2MessageParser() {
         return new HL7V2MessageParserImpl();
     }
+
+
 
 }
