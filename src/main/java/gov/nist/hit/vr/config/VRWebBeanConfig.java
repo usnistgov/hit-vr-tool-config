@@ -19,7 +19,7 @@ public class VRWebBeanConfig {
 
     @Bean
     public ResourcebundleLoader resourcebundleLoader() {
-        return new HL7V2ResourcebundleLoaderImpl();
+        return new HL7V2ResourceLoaderImpl();
     }
 
     @Bean
