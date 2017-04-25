@@ -5,7 +5,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>hit-vr-tool-config</name>
   <properties>
-    <hitcorehl7v2.version>1.0.11-SNAPSHOT</hitcorehl7v2.version>
+    <hitcorehl7v2.version>1.0.15-SNAPSHOT</hitcorehl7v2.version>
   </properties>
   <dependencies>
     <dependency>
